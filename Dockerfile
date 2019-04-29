@@ -1,4 +1,4 @@
-FROM yykingking:baseenv
+FROM yykingking/baseenv
 
 
 RUN cd / && \
@@ -19,4 +19,4 @@ RUN cd / && \
 # rpc service:
 EXPOSE 8083
 
-CMD ["/bin/bash"]	
+CMD ["node /clang-heroku-slug/app/"]	
