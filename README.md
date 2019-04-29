@@ -14,9 +14,10 @@ and
 The depend [yykingking/baseenv] DockerFile [source](https://github.com/coschain/wasm-compiler/blob/master/Dockerfile_env)
 
 
-# Build Docker
-docker build -t studio-backend .  
+# Build Docker Image
+		docker build -t studio-backend .  
 
 
-# start docker cmd line
-docker run -p 0.0.0.0:8083:8083 -e "COSCC=/usr/local/bin/cosiocc" --privileged=true studio-backend
+
+# Start Docker Image
+		docker run -p 0.0.0.0:8083:8083 -e "COSCC=/usr/local/bin/cosiocc" --privileged=true studio-backend
