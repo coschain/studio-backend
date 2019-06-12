@@ -2,7 +2,7 @@ FROM yykingking/baseenv
 
 
 RUN cd / && \
-    git clone https://github.com/coschain/wasm-compiler.git && \
+    git clone -b master https://github.com/coschain/wasm-compiler.git && \
     cd wasm-compiler/ && \
     git submodule update --init && \
     mkdir build && \
@@ -11,7 +11,7 @@ RUN cd / && \
     make -j2 install 
 
 RUN cd / && \
-    git clone https://github.com/coschain/clang-heroku-slug.git
+    git clone -b master https://github.com/coschain/clang-heroku-slug.git
 
 # rpc service:
 EXPOSE 8083

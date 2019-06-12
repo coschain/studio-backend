@@ -15,9 +15,9 @@ The depend [yykingking/baseenv] DockerFile [source](https://github.com/coschain/
 
 
 # Build Docker Image
-	docker build -t studio-backend .  
+	docker build --no-cache -t studio-backend .  
 
 
 
 # Start Docker Image
-	docker run -p 0.0.0.0:8083:8083 -e "COSCC=/usr/local/bin/cosiocc" --privileged=true studio-backend
+	docker run -p 0.0.0.0:8083:8083 -e "COSCC=/wasm-compiler/build/programs/cosiocc" --privileged=true studio-backend
